@@ -1,0 +1,12 @@
+<h1>Prueba</h1>
+{% for cv in curriculums %}
+  Curriculum: {{ cv.nombre }} <br>
+  Foto: <img src="{{ cv.foto.url }}" alt=""> <br>
+  Educación: {{ cv.educacion }} <br>
+  Usuario: {{ cv.usuario.username }} <br>
+
+  Experiencia:<br>
+  {% for experiencia in cv.experiencias.all %}
+    {{ experiencia.nombre }}<br>
+  {% endfor %}
+{% endfor %}

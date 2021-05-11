@@ -1,2 +1,4 @@
 db.sqlite3
 \.env*
+app/mediafiles/
+app/staticfiles/

@@ -6,7 +6,8 @@ ENV PYTHONDONTWRITEBYTECODE=1
 WORKDIR /usr/src/app
 
 RUN apk update \
-    && apk add postgresql-dev gcc python3-dev musl-dev
+    && apk add postgresql-dev gcc python3-dev musl-dev zlib-dev jpeg-dev
+RUN apk add zlib jpeg
 
 RUN pip install --upgrade pip
 COPY Pipfile Pipfile.lock /usr/src/app/
